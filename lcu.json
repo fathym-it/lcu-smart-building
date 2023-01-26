@@ -1,0 +1,12 @@
+{
+  "Package": {
+    "Name": "@fathym-it/lcu-smart-building",
+    "Description": "An LCU for installing @fathym-it/lcu-smart-building.",
+    "Button": "Launch",
+    "Image": "https://www.fathym.com/assets/images/logo.png",
+    "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
+    "SuccessType": "Project"
+  },
+  "EaC": "./assets/eac.json",
+  "Parameters": "./assets/parameters.json"
+}

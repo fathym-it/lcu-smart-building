@@ -1,0 +1,23 @@
+{
+  "Applications": {
+    "$1": {
+      "Application": {
+        "Description": "An application for hosting the files fromthe NPM package '{{NPM_PACKAGE}}'",
+        "Name": "NPM Package Deploy: {{NPM_PACKAGE}}"
+      },
+      "LookupConfig": {
+        "PathRegex": "/packages/{{NPM_PACKAGE}}.*"
+      },
+      "LowCodeUnit": {
+        "Package": "{{NPM_PACKAGE}}",
+        "Version": "{{PACKAGE_VERSION}}",
+        "Type": "NPM"
+      },
+      "Processor": {
+        "BaseHref": "/packages/{{NPM_PACKAGE}}/",
+        "DefaultFile": "index.html",
+        "Type": "DFS"
+      }
+    }
+  }
+}

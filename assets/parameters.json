@@ -1,0 +1,10 @@
+{
+  "NPM_PACKAGE": {
+    "type": "input",
+    "message": "Enter the NPM package name:"
+  },
+  "PACKAGE_VERSION": {
+    "type": "input",
+    "message": "Enter the NPM package version to use:"
+  }
+}
