@@ -4,7 +4,7 @@
     "Description": "A starter for custom smart buildings apps that utilizes IoT and Weather data.",
     "Button": "Launch Smart Building",
     "Image": "https://www.fathym.com/dashboard/assets/images/black_thinky.png",
-    "PreviewImage": "https://www.fathym.com/das,hboard/assets/images/black_thinky.png",
+    "PreviewImage": "https://www.fathym.com/dashboard/assets/images/black_thinky.png",
     "SourceCode": "https://github.com/fathym-it/smart-building-demo",
     "SuccessType": "Project"
   },

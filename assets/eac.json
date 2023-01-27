@@ -92,6 +92,7 @@
       "LowCodeUnit": {
         "SourceControlLookup": "fork|github://fathym-it/smart-building-demo",
         "Build": "latest",
+        "Path": "lcu-github-artifacts-release.yml",
         "Type": "GitHub"
       },
       "Processor": {
