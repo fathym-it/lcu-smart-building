@@ -2,21 +2,51 @@
   "Applications": {
     "$1": {
       "Application": {
-        "Description": "An application for hosting the files fromthe NPM package '{{NPM_PACKAGE}}'",
-        "Name": "NPM Package Deploy: {{NPM_PACKAGE}}"
+        "Name": "IoT Ensemble API Proxy",
+        "Description": "The API Proxy for IoT Ensemble APIS."
       },
       "LookupConfig": {
-        "PathRegex": "/packages/{{NPM_PACKAGE}}.*"
+        "PathRegex": "/api/demos/iot-ensemble.*"
       },
       "LowCodeUnit": {
-        "Package": "{{NPM_PACKAGE}}",
-        "Version": "{{PACKAGE_VERSION}}",
-        "Type": "NPM"
+        "APIRoot": "https://fathym-cloud-prd.azure-api.net/fcp-iotensemble",
+        "Security": "lcu-subscription-key~{{IOT_ENSEMBLE_API_KEY}}"
       },
       "Processor": {
-        "BaseHref": "/packages/{{NPM_PACKAGE}}/",
-        "DefaultFile": "index.html",
-        "Type": "DFS"
+        "InboundPath": "api/demos/iot-ensemble"
+      }
+    },
+    "$2": {
+      "Application": {
+        "Name": "Habistack API Proxy",
+        "Description": "The API Proxy for Habistack APIS."
+      },
+      "LookupConfig": {
+        "PathRegex": "/api/demos/habistack.*"
+      },
+      "LowCodeUnit": {
+        "APIRoot": "https://fathym-cloud-prd.azure-api.net/habistack/weather/ground",
+        "Security": "lcu-subscription-key~{{HABISTACK_API_KEY}}"
+      },
+      "Processor": {
+        "InboundPath": "api/demos/habistack"
+      }
+    },
+    "$3": {
+      "Application": {
+        "Name": "Geocodio API Proxy",
+        "Description": "The API Proxy for Geocodio APIS."
+      },
+      "LookupConfig": {
+        "PathRegex": "/api/demos/geocodio.*"
+      },
+      "LowCodeUnit": {
+        "APIRoot": "https://api.geocod.io/v1.7/",
+        "Security": "?api_key~{{GEOCODIO_API_KEY}}",
+        "Type": "Proxy"
+      },
+      "Processor": {
+        "InboundPath": "api/demos/geocodio"
       }
     }
   }

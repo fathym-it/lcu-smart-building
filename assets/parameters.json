@@ -1,10 +1,14 @@
 {
-  "NPM_PACKAGE": {
+  "IOT_ENSEMBLE_API_KEY": {
     "type": "input",
-    "message": "Enter the NPM package name:"
+    "message": "Enter your IoT Ensemble API Key (/dashboard/iot):"
   },
-  "PACKAGE_VERSION": {
+  "HABISTACK_API_KEY": {
     "type": "input",
-    "message": "Enter the NPM package version to use:"
+    "message": "Enter your Habistack API Key (/dashboard/iot):"
+  },
+  "GEOCODIO_API_KEY": {
+    "type": "input",
+    "message": "Enter your Geocodio API Key (https://www.geocod.io/):"
   }
 }
