@@ -1,14 +1,14 @@
 {
   "IOT_ENSEMBLE_API_KEY": {
     "type": "input",
-    "message": "Enter your IoT Ensemble API Key (/dashboard/iot):"
+    "message": "Enter your IoT Ensemble API Key (www.fathym.com/dashboard/iot):"
   },
   "HABISTACK_API_KEY": {
     "type": "input",
-    "message": "Enter your Habistack API Key (/dashboard/iot):"
+    "message": "Enter your Habistack API Key (www.fathym.com/dashboard/iot):"
   },
   "GEOCODIO_API_KEY": {
     "type": "input",
-    "message": "Enter your Geocodio API Key (https://www.geocod.io/):"
+    "message": "Enter your Geocodio API Key (www.geocod.io/):"
   }
 }
