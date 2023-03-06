@@ -55,7 +55,6 @@
       }
     },
     "$4": {
-      "AccessRightLookups": null,
       "Application": {
         "Description": "A starter for custom smart buildings apps that utilizes IoT and Weather data.",
         "Name": "Smart Building Demo Starter - Forked Recipe"
