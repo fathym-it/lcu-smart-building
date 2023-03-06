@@ -132,6 +132,7 @@
           "MainBranch": "main",
           "Organization": "fathym-it",
           "Repository": "smart-building-demo",
+          "Name": "github://fathym-it/smart-building-demo",
           "Type": "GitHub"
         }
       }
