@@ -3,7 +3,7 @@
     "$1": {
       "Application": {
         "Name": "IoT Ensemble API Proxy",
-        "Description": "The API Proxy for IoT Ensemble APIS."
+        "Description": "The API Proxy for IoT Ensemble APIs."
       },
       "LookupConfig": {
         "PathRegex": "/api/demos/iot-ensemble.*"
@@ -21,7 +21,7 @@
     "$2": {
       "Application": {
         "Name": "Habistack API Proxy",
-        "Description": "The API Proxy for Habistack APIS."
+        "Description": "The API Proxy for Habistack APIs."
       },
       "LookupConfig": {
         "PathRegex": "/api/demos/habistack.*"
@@ -39,7 +39,7 @@
     "$3": {
       "Application": {
         "Name": "Geocodio API Proxy",
-        "Description": "The API Proxy for Geocodio APIS."
+        "Description": "The API Proxy for Geocodio APIs."
       },
       "LookupConfig": {
         "PathRegex": "/api/demos/geocodio.*"
