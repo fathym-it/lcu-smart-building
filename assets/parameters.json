@@ -5,7 +5,7 @@
   },
   "HABISTACK_API_KEY": {
     "type": "input",
-    "message": "Enter your Habistack API Key (www.fathym.com/dashboard/iot):"
+    "message": "Enter your Habistack API Key (www.fathym.com/dashboard/forecast):"
   },
   "GEOCODIO_API_KEY": {
     "type": "input",
