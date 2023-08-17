@@ -2,9 +2,28 @@
   "Package": {
     "Name": "Smart Building Demo Starter",
     "Description": "A starter for custom smart buildings apps that utilizes IoT and Weather data.",
-    "Button": "Launch Smart Building",
-    "Image": "https://www.fathym.com/dashboard/assets/images/black_thinky.png",
-    "PreviewImage": "https://www.fathym.com/dashboard/assets/images/black_thinky.png",
-    "UsesGit": true
+    "Image": "https://www.fathym.com/assets/images/logo.png",
+    "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
+    "Intents": [
+      "Smart Building",
+      "IoT Dashboard",
+      "Launch Control",
+      "Getting Started",
+      "IoT",
+      "Azure Cloud"
+    ]
+  },
+  "Configurations": {
+    "Basic": {
+      "Name": "Smart Building Demo Starter",
+      "Description": "A starter for custom smart buildings apps that utilizes IoT and Weather data.",
+      "Phases": [
+        {
+          "Name": "Configure Smart Building IoT Starter",
+          "Order": 1,
+          "Asset": "configure"
+        }
+      ]
+    }
   }
 }
