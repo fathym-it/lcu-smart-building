@@ -1,6 +1,6 @@
 {
   "name": "@fathym-it/lcu-smart-building",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "@fathym-it/lcu-smart-building",
   "author": "Fathym, Inc",
   "main": "lcu.json",
