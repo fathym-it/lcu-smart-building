@@ -6,7 +6,7 @@
         "Description": "The API Proxy for IoT Ensemble APIs."
       },
       "LookupConfig": {
-        "PathRegex": "/api/demos/iot-ensemble.*"
+        "PathRegex": "/api/iot.*"
       },
       "LowCodeUnit": {
         "APIRoot": "https://fathym-cloud-prd.azure-api.net/fcp-iotensemble",
@@ -14,7 +14,7 @@
         "Type": "API"
       },
       "Processor": {
-        "InboundPath": "api/demos/iot-ensemble",
+        "InboundPath": "api/iot",
         "Type": "Proxy"
       }
     },
@@ -24,7 +24,7 @@
         "Description": "The API Proxy for Habistack APIs."
       },
       "LookupConfig": {
-        "PathRegex": "/api/demos/habistack.*"
+        "PathRegex": "/api/habistack.*"
       },
       "LowCodeUnit": {
         "APIRoot": "https://fathym-cloud-prd.azure-api.net/habistack/weather/ground",
@@ -32,7 +32,7 @@
         "Type": "API"
       },
       "Processor": {
-        "InboundPath": "api/demos/habistack",
+        "InboundPath": "api/habistack",
         "Type": "Proxy"
       }
     },
@@ -42,7 +42,7 @@
         "Description": "The API Proxy for Geocodio APIs."
       },
       "LookupConfig": {
-        "PathRegex": "/api/demos/geocodio.*"
+        "PathRegex": "/api/geocodio.*"
       },
       "LowCodeUnit": {
         "APIRoot": "https://api.geocod.io/v1.7/",
@@ -50,26 +50,44 @@
         "Type": "API"
       },
       "Processor": {
-        "InboundPath": "api/demos/geocodio",
+        "InboundPath": "api/geocodio",
         "Type": "Proxy"
       }
     },
     "$4": {
       "Application": {
-        "Description": "A starter for custom smart buildings apps that utilizes IoT and Weather data.",
-        "Name": "Smart Building Demo Starter - Forked Recipe"
+        "Name": "Freeboard API Proxy",
+        "Description": "The API Proxy for Freeboard using the Warm Query IoT API"
       },
       "LookupConfig": {
-        "PathRegex": "/demos/smart-building.*"
+        "PathRegex": "/api/freeboard.*"
       },
       "LowCodeUnit": {
-        "SourceControlLookup": "fork|github://fathym-it/smart-building-demo",
+        "APIRoot": "https://fathym-cloud-prd.azure-api.net/fcp-iotensemble/WarmQuery",
+        "Security": "lcu-subscription-key~{{IOT_ENSEMBLE_API_KEY}}",
+        "Type": "API"
+      },
+      "Processor": {
+        "InboundPath": "api/freeboard",
+        "Type": "Proxy"
+      }
+    },
+    "$5": {
+      "Application": {
+        "Description": "A simple data dashboard",
+        "Name": "Data Dashboard"
+      },
+      "LookupConfig": {
+        "PathRegex": "/.*"
+      },
+      "LowCodeUnit": {
+        "SourceControlLookup": "fork|github://fathym-it/fathym-data-dashboard",
         "Build": "latest",
         "Path": "lcu-github-artifacts-release.yml",
         "Type": "GitHub"
       },
       "Processor": {
-        "BaseHref": "/demos/smart-building/",
+        "BaseHref": "/",
         "DefaultFile": "index.html",
         "Type": "DFS"
       },
@@ -77,7 +95,33 @@
         "lcu-state-config": {
           "Name": "state-config",
           "Description": "state-config",
-          "Value": "{\n  \"PointAPIQuery\": \"/api/v0/point-query\",\n  \"VariablesAPIQuery\": \"/api/v0/api-variables\",\n  \"HabistackAPIRoot\": \"/api/demos/habistack\",\n  \"GeocodioAPIRoot\": \"/api/demos/geocodio\",\n  \"GeocodioQuery\": \"/geocode\",\n  \"IoTAPIQuery\": \"/WarmQuery?includeEmulated=true&page=1&pageSize=100\",\n  \"IoTAPIRoot\": \"/api/demos/iot-ensemble\",\n  \"SelectedVariables\": [\n    \"WindGust_Surface\",\n    \"WindSpeed_10Meters\",\n    \"WindDirection_10Meters\",\n \"Temperature_Surface\"\n ],\n \"DefaultChartPrefs\": [\n { \n \"Mode\": \"Light\",\n \"ChartType\": \"Line\",\n \"BackgroundColor\": \"rgb(0, 0, 0, 0.4)\", \n \"BorderColor\": \"rgb(0, 0, 0, 0.4)\" \n }, \n { \n \"Mode\": \"Dark\",\n \"ChartType\": \"Line\",\n \"BackgroundColor\": \"rgb(255, 255, 255, 0.4)\", \n \"BorderColor\": \"rgb(255, 255, 255, 0.4)\" \n }, \n { \n \"Mode\": \"Light\",\n \"ChartType\": \"Bar\",\n \"BackgroundColor\": \"rgb(0, 0, 0, 0.4)\", \n \"BorderColor\": \"rgb(0, 0, 0, 0.4)\" \n }, \n { \n \"Mode\": \"Dark\",\n \"ChartType\": \"Bar\",\n \"BackgroundColor\": \"rgb(255, 255, 255, 0.4)\", \n \"BorderColor\": \"rgb(255, 255, 255, 0.4)\" \n } \n ], \n \"Location\": \"Denver, CO\",\n  \"RefreshRate\": \"30000\"\n}"
+          "Value": "{\r\n    \"Location\": \"{{DEFAULT_LOCATION}}\",\r\n    \"IoTAPIQuery\": \"\/WarmQuery?includeEmulated=true&page=1&pageSize=100\"\r\n}"
+        }
+      }
+    },
+    "$6": {
+      "Application": {
+        "Description": "Freeboard Dashboard",
+        "Name": "Freeboard Dashboard"
+      },
+      "LookupConfig": {
+        "PathRegex": "/freeboard.*"
+      },
+      "LowCodeUnit": {
+        "Package": "@semanticjs/freeboard",
+        "Version": "latest",
+        "Type": "NPM"
+      },
+      "Processor": {
+        "BaseHref": "/freeboard/",
+        "DefaultFile": "index.html",
+        "Type": "DFS"
+      },
+      "DataTokens": {
+        "lcu-state-config": {
+          "Name": "state-config",
+          "Description": "state-config",
+          "Value": "{\"FreeboardConfigURL\": \"https://www.fathym.com/templates/freeboard/DeviceDemoDashboard-BioTechFreeboard.json\"}"
         }
       }
     }
@@ -106,13 +150,13 @@
         }
       },
       "Sources": {
-        "fork|github://fathym-it/smart-building-demo": {
+        "fork|github://fathym-it/fathym-data-dashboard": {
           "DevOpsActionTriggerLookups": ["github-artifacts-release-react"],
           "Branches": ["main"],
           "MainBranch": "main",
           "Organization": "fathym-it",
-          "Repository": "smart-building-demo",
-          "Name": "github://fathym-it/smart-building-demo",
+          "Repository": "fathym-data-dashboard",
+          "Name": "github://fathym-it/fathym-data-dashboard",
           "Type": "GitHub"
         }
       }
