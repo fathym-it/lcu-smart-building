@@ -198,6 +198,10 @@
   },
   "Projects": {
     "{{PROJECT_LOOKUP}}": {
+      "Details": {
+        "Name": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#if Details.Name}}{{Details.Name}}{{/if}}{{else}}Smart Buildings Launch Pad{{/if}}",
+        "Description": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#if Details.Description}}{{Details.Description}}{{/if}}{{else}}A smart building launch pad containing a dashboard auto-populated with emulated data or sensor data and weather forecast data from multiple APIs. Also includes a Freeboard dashboard to view emulated or device data auto-populated from IoT Ensemble APIs.{{/if}}"
+      },
       "ApplicationLookups": [
         "{{PROJECT_LOOKUP}}-data-dashboard",
         "{{PROJECT_LOOKUP}}-iot-ensemble-api-proxy",

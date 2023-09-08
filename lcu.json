@@ -1,7 +1,7 @@
 {
   "Package": {
-    "Name": "Smart Building Demo Starter",
-    "Description": "A starter for custom smart buildings apps that utilizes IoT and Weather data.",
+    "Name": "Smart Buildings Launch Pad",
+    "Description": "A smart building launch pad containing a dashboard auto-populated with emulated data or sensor data and weather forecast data from multiple APIs. Also includes a Freeboard dashboard to view emulated or device data auto-populated from IoT Ensemble APIs.",
     "Image": "https://www.fathym.com/assets/images/logo.png",
     "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
     "Intents": [
@@ -15,11 +15,11 @@
   },
   "Configurations": {
     "Basic": {
-      "Name": "Smart Building Demo Starter",
-      "Description": "A starter for custom smart buildings apps that utilizes IoT and Weather data.",
+      "Name": "Smart Buildings Launch Pad",
+      "Description": "A smart building launch pad containing a dashboard auto-populated with emulated data or sensor data and weather forecast data from multiple APIs. Also includes a Freeboard dashboard to view emulated or device data auto-populated from IoT Ensemble APIs.",
       "Phases": [
         {
-          "Name": "Configure Smart Building IoT Starter",
+          "Name": "Configuring Smart Buildings Launch Pad",
           "Order": 1,
           "Asset": "configure"
         }
